@@ -54,8 +54,7 @@ public class ContestDAO {
 				game = new Game(rs.getString("title"),rs.getInt("min_players"),rs.getInt("max_players"));
 				winner = new Player(rs.getString("email"),rs.getString("nickname"));
 				contest = new Contest(rs.getInt(1),game,Instant.ofEpochMilli(rs.getDate("start_date").getTime()).atZone(ZoneId.systemDefault()).toLocalDate(),winner, rs.getInt("total"));
-				int winner_id = rs.getInt("winner_id");
-				
+				contest.getWinner().setId(rs.getInt("winner_id"));
 				contests.add(contest);
 			}
 

@@ -50,4 +50,22 @@ public class PlayerDao implements IDAO<Player> {
 		}
 		return players;
 	}
+	
+	public Player getById(int id){
+		Player player=null;
+		
+		try {
+			req = connect.prepareStatement("select * from player where id=?");
+			req.setInt(1, id);
+			rs = req.executeQuery();
+
+			if(rs.next()) {
+				player = new Player(id, rs.getString("email"),rs.getString("nickname"));
+			}
+
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+		return player;
+	}
 }

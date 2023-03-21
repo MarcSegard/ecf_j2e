@@ -66,14 +66,15 @@ public class GestionTournoi extends HttpServlet {
 
 		if (action.equals("add_player")) {
 			contestDao.addPlayerToContestById(contest_id, player_id);
+			doGet(request, response);
 		}
 		
 		if (action.equals("winner")) {
 			System.out.println("Je suis dans le winner");
 			contestDao.addWinnerById(contest_id, player_id);
+			response.sendRedirect("/scoreboard/");
 		}
 		
-		doGet(request, response);
 	}
 
 }

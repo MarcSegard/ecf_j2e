@@ -3,7 +3,7 @@
 	<form method="post">
 		<div class="mb-3">
 			<label for="email" class="form-label">Email</label>
-			 <input type="text" class="form-control" name="email" />
+			 <input type="email" class="form-control" name="email" />
 		</div>
 		<div class="mb-3">
 			<label for="nickname" class="form-label">Pseudo</label>
