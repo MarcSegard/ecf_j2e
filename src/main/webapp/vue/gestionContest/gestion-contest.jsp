@@ -1,11 +1,10 @@
 <div class="container">
-	<h1>
-		Gestion du tournoi <span class="text-danger">"<c:out
+	<h1>	Gestion du tournoi <span class="text-danger">"<c:out
 				value="${nom_jeu}" />"
 		</span>
 	</h1>
-	<div class="row">
-		<div class="col-6">
+	<div class="row mt-3">
+		<div class="card  col-6">
 			<h2 class="mb-3">Liste des joueurs</h2>
 			<table class="table">
 				<thead>
@@ -42,7 +41,7 @@
 			</c:if>
 		</div>
 		<div class="col-6">
-			<h1 class="my-2">Ajoutez un joueur:</h1>
+			<h2 class="my-2">Ajoutez un joueur:</h2>
 			<form method="post">
 				<div class="mb-3">
 					<input type="hidden" name="action" value="add_player"> <input
@@ -65,12 +64,12 @@
 					<c:out value="${error }" default="" />
 				</div>
 			</c:if>
-			<h1 class="my-2">Sélectionner le vainqueur:</h1>
+			<h2 class="my-2 mt-4">Sélectionner le vainqueur:</h2>
 			<form method="post">
 				<div class="mb-3">
 					<input type="hidden" name="action" value="winner"> <input
 						type="hidden" name="contest_id" value=${id_contest }> <label
-						for="game-select">Choisir le joueur à ajouter:</label> <select
+						for="game-select">Choisir le vainqueur:</label> <select
 						name="player_id" class="form-control" id="game-select">
 						<c:forEach items="${ all_players }" var="player"
 							varStatus="status">
