@@ -33,9 +33,7 @@ public class DeleteUserContest extends HttpServlet {
 		ContestDAO contestDao = new ContestDAO();
 		contestDao.deletePlayerFromContestById(contest_id, player_id);
 		request.setAttribute("id_contest", contest_id);
-		System.out.println(contest_id + " " + player_id);
 		
-		//request.getRequestDispatcher("/vue/gestionContest/gestion-contest.jsp").forward(request, response);
 		response.sendRedirect("/scoreboard/gestion-contest?id="+contest_id);
 		
 	}

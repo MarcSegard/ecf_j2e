@@ -49,7 +49,6 @@ public class AddContest extends HttpServlet {
 		
 		
 		if (contestDao.ajout(contest)){
-			System.out.println("Tournoi ajouté");
 			response.sendRedirect("/scoreboard/");
 		} else {
 			request.setAttribute("error", "Le tournoi n'a pas pu être ajouté");

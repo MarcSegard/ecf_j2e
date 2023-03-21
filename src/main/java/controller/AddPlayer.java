@@ -40,7 +40,6 @@ public class AddPlayer extends HttpServlet {
 		Player player = new Player(request.getParameter("email"),request.getParameter("nickname"));
 		
 		if (playerDao.ajout(player)) {
-			System.out.println("Joueur ajouté");
 			response.sendRedirect("/scoreboard/");
 		} else {
 			request.setAttribute("error", "Le joueur n'a pas pu être ajouté");

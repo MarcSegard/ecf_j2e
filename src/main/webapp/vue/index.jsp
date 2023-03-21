@@ -1,7 +1,7 @@
 <div class="container">
 	<div class="row mt-4">
 		<div class="card col-6">
-			<h2 class="mb-3">Liste des joueurs</h2>
+			<h2 class="mb-3 mr-2">Liste des joueurs</h2>
 			<table class="table">
 				<thead>
 					<tr>

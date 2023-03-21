@@ -38,7 +38,6 @@ public class GestionTournoi extends HttpServlet {
 			throws ServletException, IOException {
 		PlayerDao playerDao = new PlayerDao();
 		int id_contest = Integer.parseInt(request.getParameter("id"));
-		System.out.println(id_contest);
 		ArrayList<Player> players = contestDao.getPlayersById(id_contest);
 		ArrayList<Player> allPlayers = playerDao.read();
 		Contest contest = contestDao.getContestById(id_contest);
@@ -70,7 +69,6 @@ public class GestionTournoi extends HttpServlet {
 		}
 		
 		if (action.equals("winner")) {
-			System.out.println("Je suis dans le winner");
 			contestDao.addWinnerById(contest_id, player_id);
 			response.sendRedirect("/scoreboard/");
 		}

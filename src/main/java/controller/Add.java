@@ -45,7 +45,6 @@ public class Add extends HttpServlet {
 				Integer.parseInt(request.getParameter("max_players")));
 
 		if(gameDao.ajout(game)) {
-			System.out.println("Jeu ajouté");
 			response.sendRedirect("/scoreboard/");
 		} else {
 			request.setAttribute("error", "Le jeu n'a pas pu être ajouté");
