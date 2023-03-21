@@ -1,5 +1,5 @@
-<div class="container">
-	<h1 class="my-2">Ajoutez un tournoi:</h1>
+<div class="container card mt-4 w-50">
+	<h2 class="my-2">Ajoutez un tournoi:</h2>
 	<form method="post">
 		<div class="mb-3">
 			<label for="game-select">Choisir le jeu pour le tournoi:</label> 

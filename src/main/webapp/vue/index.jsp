@@ -1,6 +1,6 @@
 <div class="container">
-	<div class="row">
-		<div class="col-6">
+	<div class="row mt-4">
+		<div class="card col-6">
 			<h2 class="mb-3">Liste des joueurs</h2>
 			<table class="table">
 				<thead>
@@ -19,10 +19,10 @@
 				</tbody>
 			</table>
 			<a href="add-player">
-				<button class="btn btn-success">Ajouter un joueur</button>
+				<button class="btn btn-success mb-3">Ajouter un joueur</button>
 			</a>
 		</div>
-		<div class="col-6">
+		<div class="card col-6">
 			<h2 class="mb-3">Liste des jeux disponibles</h2>
 			<table class="table">
 				<thead>
@@ -48,7 +48,7 @@
 		</div>
 	</div>
 	<div class="row mt-3">
-		<div class="col-6">
+		<div class="card col-6">
 			<h2 class="mb-3">Tournois en cours</h2>
 			<table class="table">
 				<thead>
@@ -72,12 +72,12 @@
 				</tbody>
 			</table>
 			<a href="add-contest">
-				<button class="btn btn-success">Ajouter un tournoi</button>
+				<button class="btn btn-success mb-3">Ajouter un tournoi</button>
 			</a>
 		</div>
 	</div>
-	<div class="row mt-3">
-		<h2 class="mb-3">Résultats des tournois</h2>
+	<div class="row card  mt-3">
+		<h2 class="mb-3 ml-3">Résultats des tournois</h2>
 		<table class="table">
 			<thead>
 				<tr>
